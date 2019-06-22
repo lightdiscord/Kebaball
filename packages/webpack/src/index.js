@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
         },
 
         resolve: {
-            extensions: [".js", ".svelte"],
+            extensions: [".mjs", ".js", ".svelte"],
         },
 
         output: {
