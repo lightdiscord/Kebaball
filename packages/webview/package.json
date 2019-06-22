@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lightdiscord/Kebaball#readme",
   "dependencies": {
-    "svelte": "^3.5.3"
+    "svelte": "^3.5.3",
+    "three": "^0.105.2"
   }
 }
