@@ -2,6 +2,7 @@ importers:
   packages/webpack:
     dependencies:
       '@babel/core': 7.4.5
+      '@babel/plugin-syntax-dynamic-import': 7.2.0_@babel+core@7.4.5
       '@babel/preset-env': 7.4.5_@babel+core@7.4.5
       '@kebaball-packages/webview': 'link:../webview'
       babel-loader: 8.0.6_@babel+core@7.4.5+webpack@4.35.0
@@ -18,6 +19,7 @@ importers:
       webpack-dev-server: 3.7.2_webpack@4.35.0
     specifiers:
       '@babel/core': ^7.4.5
+      '@babel/plugin-syntax-dynamic-import': ^7.2.0
       '@babel/preset-env': ^7.4.5
       '@kebaball-packages/webview': 'file:../webview'
       babel-loader: ^8.0.6
@@ -297,6 +299,15 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-1ZrIRBv2t0GSlcwVoQ6VgSLpLgiN/FVQUzt9znxo7v2Ov4jJrs8RY8tv0wvDmFN3qIdMKWrmMMW6yZ0G19MfGg==
+  /@babel/plugin-syntax-dynamic-import/7.2.0_@babel+core@7.4.5:
+    dependencies:
+      '@babel/core': 7.4.5
+      '@babel/helper-plugin-utils': 7.0.0
+    dev: false
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-mVxuJ0YroI/h/tbFTPGZR8cv6ai+STMKNBq0f8hFxsxWjl94qqhsb+wXbpNMDPU3cfR1TIsVFzU3nXyZMqyK4w==
   /@babel/plugin-syntax-json-strings/7.2.0_@babel+core@7.4.5:
     dependencies:
       '@babel/core': 7.4.5
