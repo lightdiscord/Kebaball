@@ -1,0 +1,14 @@
+importers:
+  packages/webview:
+    dependencies:
+      svelte: 3.5.3
+    specifiers:
+      svelte: ^3.5.3
+lockfileVersion: 5.1
+packages:
+  /svelte/3.5.3:
+    dev: false
+    engines:
+      node: '>= 8'
+    resolution:
+      integrity: sha512-hZcfPagZmfz4a59gtvomWlgcojl0dc30+3hplk+wBhAJm9cGjEAosZYpA9bXwF8zaGomO5bFODfCutxvOghTEg==
