@@ -1,0 +1,19 @@
+{
+  "name": "@kebaball-packages/utils",
+  "version": "0.1.0",
+  "description": "Kebaball utils functions",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lightdiscord/Kebaball.git"
+  },
+  "author": "LightDiscord <root@arnaud.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lightdiscord/Kebaball/issues"
+  },
+  "homepage": "https://github.com/lightdiscord/Kebaball#readme"
+}
