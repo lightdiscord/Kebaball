@@ -43,9 +43,13 @@ importers:
       webpack-dev-server: ^3.7.2
   packages/webview:
     dependencies:
+      '@kebaball-packages/objects': 'link:../objects'
+      '@kebaball-packages/utils': 'link:../utils'
       svelte: 3.5.3
       three: 0.105.2
     specifiers:
+      '@kebaball-packages/objects': 'file:../objects'
+      '@kebaball-packages/utils': 'file:../utils'
       svelte: ^3.5.3
       three: ^0.105.2
 lockfileVersion: 5.1

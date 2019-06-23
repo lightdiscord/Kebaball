@@ -1,40 +1,26 @@
 <script>
     import { onMount } from "svelte";
     import { Scene, PerspectiveCamera, FaceColors, WebGLRenderer, CylinderGeometry, MeshBasicMaterial, Mesh } from "three";
-
-    const createCylinder = (...targets) => {
-        const geometry = new CylinderGeometry(1, 1, 1, 8);
-
-        // TOP = BOTTOM = 8 faces
-        // FACE = 2
-
-        geometry.faces.forEach(face => face.color.set(0xdddddd));
-
-        for (const target of targets) {
-            ([target * 2, target * 2 + 1, 16 + target, 16 + target + 8])
-                .map(idx => geometry.faces[idx])
-                .forEach(face => face.color.set(0x333333));
-        }
-
-        const material = new MeshBasicMaterial({ vertexColors: FaceColors });
-
-        return new Mesh(geometry, material);
-    };
+    import { createCylinder } from "@kebaball-packages/objects/src/cylinder";
+    import { range } from "@kebaball-packages/utils";
 
     const scene = new Scene();
     const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    const a = createCylinder(3, 4);
-    const b = createCylinder(4, 5);
-    const c = createCylinder(2,3,4,5,6);
+    const cylinders = [
+        createCylinder(range(3, 4)),
+        createCylinder(range(4, 5)),
+        createCylinder(range(2, 5)),
+    ];
 
-    b.position.y = 1;
-    c.position.y = 2;
+    cylinders.forEach((cylinder, idx) => {
+        cylinder.position.y = idx
+        scene.add(cylinder);
+    });
 
-    const cylinders = [a, b, c];
-
-    cylinders.forEach(cylinder => scene.add(cylinder));
-    camera.position.z = 5;
+    camera.rotation.x -= 0.5;
+    camera.position.y = cylinders.length + 2;
+    camera.position.z = 3;
 
     let canvas;
 
