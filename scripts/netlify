@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+PARENT_PATH=$(readlink -f "$(dirname ${BASH_SOURCE[0]})/..")
+
+cd $PARENT_PATH
+npx pnpm recursive install
+
+cd packages/webpack
+npx pnpm run build
+
+cd -
+cd -
