@@ -19,8 +19,9 @@
     });
 
     camera.rotation.x -= 0.5;
-    camera.position.y = cylinders.length + 2;
-    camera.position.z = 3;
+    camera.position.y = cylinders.length + 5;
+    camera.position.z = 5;
+    window.camera = camera;
 
     let canvas;
 
@@ -31,7 +32,7 @@
         const animate = () => {
             requestAnimationFrame(animate);
 
-            cylinders.forEach(cylinder => (cylinder.rotation.y += 0.1));
+            cylinders.forEach(cylinder => (cylinder.rotation.y += 0.02));
 
             renderer.render(scene, camera);
         }
